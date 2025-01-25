@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilaThaGoddess Slave Application</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #0a001f; /* Deep midnight blue */
+            color: #e6e6fa; /* Light lavender for text */
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff0080; /* Vibrant pink for bold, sensual headlines */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        form {
+            background: linear-gradient(145deg, #1a0033, #2e005c); /* Gradient for cyber glow */
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0px 5px 15px rgba(255, 0, 128, 0.6); /* Pink glow */
+        }
+        label {
+            display: block;
+            margin: 20px 0 5px;
+            font-weight: bold;
+            color: #ff66cc; /* Soft pink accent */
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #9d00ff; /* Neon purple for inputs */
+            border-radius: 10px;
+            background-color: #1c003a; /* Dark purple background for fields */
+            color: #e6e6fa;
+            font-size: 14px;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #b399ff; /* Light purple for placeholder text */
+        }
+        button {
+            background-color: #ff0080; /* Vibrant pink for buttons */
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #e60073; /* Slightly darker pink on hover */
+            box-shadow: 0 0 15px #ff0080; /* Glow effect */
+        }
+        a {
+            color: #00e6e6; /* Neon blue for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #00ffff; /* Lighter blue on hover */
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MilaThaGoddess</h1>
+    <h2>Slave Application</h2>
+    <p>
+        <strong>APPLICATION FEE:</strong> $50 USD. Please pay via 
+        <a href="https://throne.com/findom_mila" target="_blank">Throne under Appetite</a> 
+        before continuing!
+    </p>
+    <p>
+        <strong>Note:</strong> Once accepted as a slave, you will receive a personalized verification video from me. Until then, submission and payment are required for consideration.
+    </p>
+    <form id="slaveForm">
+        <label for="name">Name (First & Last)</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="referral-name">What would you like to be referred to as?</label>
+        <input type="text" id="referral-name" name="referral-name" placeholder="Leave blank if you'd like me to choose" required>
+
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" placeholder="Male, Female, Non-Binary, etc." required>
+
+        <label for="orientation">Sexual Orientation</label>
+        <input type="text" id="orientation" name="orientation" placeholder="Straight, Bi, Gay, etc." required>
+
+        <label for="social-media">Social Media (related to Findom/Sub Content)</label>
+        <input type="text" id="social-media" name="social-media" placeholder="Reddit, Instagram, etc.">
+
+        <label for="kinks">Kinks & Interests (Rate 1-10)</label>
+        <textarea id="kinks" name="kinks" rows="4" placeholder="e.g., Financial Domination (10), Body Worship (8), Slave Training (7)" required></textarea>
+
+        <label for="relationship-status">Relationship Status</label>
+        <input type="text" id="relationship-status" name="relationship-status" placeholder="Single, Dating, etc.">
+
+        <label for="experience">Experience with Findom (1-5)</label>
+        <select id="experience" name="experience" required>
+            <option value="1">1 - Brand New</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 - Experienced Slave</option>
+        </select>
+
+        <label for="submission">Are you submissive at all times, or only when aroused?</label>
+        <textarea id="submission" name="submission" rows="2" placeholder="Explain briefly." required></textarea>
+
+        <label for="hours">How many hours per week can you serve?</label>
+        <input type="text" id="hours" name="hours" placeholder="e.g., 10 hours per week" required>
+
+        <label for="budget">Monthly Budget (USD)</label>
+        <input type="text" id="budget" name="budget" placeholder="Enter your budget for serving" required>
+
+        <label for="limits">Hard Limits</label>
+        <textarea id="limits" name="limits" rows="3" placeholder="List any non-negotiable limits." required></textarea>
+
+        <p>
+            <strong>Non-compliance Policy:</strong> Any non-compliance will result in immediate blocking, and a blocking fee must be paid via 
+            <a href="https://throne.com/findom_mila" target="_blank">Throne</a> to regain access.
+        </p>
+
+        <button type="button" onclick="sendEmail()">Submit Application</button>
+    </form>
+
+    <script>
+        function sendEmail() {
+            const form = document.getElementById('slaveForm');
+            const formData = new FormData(form);
+            const emailBody = Array.from(formData.entries())
+                .map(([key, value]) => `${key}: ${value}`)
+                .join('%0A'); // Encodes line breaks for email
+            window.location.href = `mailto:GoddessCamila@proton.me?subject=Slave Application&body=${emailBody}`;
+        }
+    </script>
+</body>
+</html>
